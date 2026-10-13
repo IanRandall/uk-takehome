@@ -4,6 +4,8 @@ A payslip estimate for employees in England, Wales, and Northern Ireland. Enter 
 
 The figure you enter is the gross pay for the period you choose: a week, a month, or a year. An annual salary also shows take-home pay per month.
 
+The published site is [ianrandall.github.io/uk-takehome](https://ianrandall.github.io/uk-takehome/).
+
 ## Run it
 
 ```bash
