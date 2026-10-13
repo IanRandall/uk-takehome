@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UK take-home pay</title>
+  </head>
+  <body>
+    <main class="page">
+      <header>
+        <p class="eyebrow">Tax year 2026/27</p>
+        <h1>Take-home pay</h1>
+        <p class="lede">
+          A payslip estimate for employees in England, Wales, and Northern Ireland.
+        </p>
+      </header>
+
+      <div class="layout">
+        <form id="pay-form" class="form" novalidate>
+          <label class="field">
+            <span>Gross pay</span>
+            <span class="adorned">
+              <span class="mark" aria-hidden="true">£</span>
+              <input id="gross" name="gross" type="text" inputmode="decimal" autocomplete="off" placeholder="3000.00" />
+            </span>
+          </label>
+
+          <fieldset class="field">
+            <legend class="segment-label">Pay period</legend>
+            <div class="segment">
+              <input id="period-weekly" type="radio" name="period" value="weekly" />
+              <label for="period-weekly">Weekly</label>
+              <input id="period-monthly" type="radio" name="period" value="monthly" checked />
+              <label for="period-monthly">Monthly</label>
+              <input id="period-annual" type="radio" name="period" value="annual" />
+              <label for="period-annual">Annual</label>
+            </div>
+          </fieldset>
+
+          <label class="field">
+            <span>Tax code</span>
+            <span class="adorned">
+              <input id="tax-code" name="tax-code" type="text" value="1257L" autocapitalize="characters" autocomplete="off" spellcheck="false" />
+            </span>
+          </label>
+
+          <label class="field">
+            <span>Pension</span>
+            <span class="adorned">
+              <input id="pension" name="pension" type="text" inputmode="decimal" value="0" autocomplete="off" />
+              <span class="mark" aria-hidden="true">%</span>
+            </span>
+            <p class="hint">Salary sacrifice, taken off your pay before tax and National Insurance.</p>
+          </label>
+        </form>
+
+        <section id="payslip" aria-live="polite"></section>
+      </div>
+
+      <p class="footnote">
+        Estimate for a regular salary in the 2026/27 tax year. Income Tax uses England, Wales, and Northern Ireland bands. National Insurance is employee category A. Student loans are not included. Payroll can differ by a few pence because of HMRC rounding.
+      </p>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
